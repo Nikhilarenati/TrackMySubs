@@ -1,0 +1,14 @@
+{
+  "name": "simmy-pro-1",
+  "private": true,
+  "scripts": {
+    "setup": "npm install --prefix Server && npm install --prefix client",
+    "dev": "node scripts/dev.cjs",
+    "dev:server": "npm run dev --prefix Server",
+    "dev:client": "npm run dev --prefix client -- --host 0.0.0.0",
+    "dev:backend": "npm run dev:server",
+    "dev:frontend": "npm run dev:client",
+    "build": "npm run build --prefix client",
+    "start": "npm run start --prefix Server"
+  }
+}
