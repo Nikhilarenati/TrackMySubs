@@ -1,5 +1,4 @@
 const express = require("express");
-const cors = require("cors");
 const dotenv = require("dotenv");
 const connectDB = require("./config/db");
 const subRoutes = require("./routes/sub");
@@ -9,7 +8,12 @@ dotenv.config();
 
 const app = express();
 
-app.use(cors());
+
+const cors = require("cors");
+app.use(cors({
+  origin: "*"
+}));
+
 app.use(express.json());
 
 app.get("/api/health", (req, res) => {
