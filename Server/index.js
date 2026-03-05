@@ -13,7 +13,7 @@ connectDB();
 
 const cors = require("cors");
 app.use(cors({
-  origin: "*"
+  origin: "https://trackmysubs-1.onrender.com"
 }));
 
 app.use(express.json());
